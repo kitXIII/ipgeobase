@@ -2,7 +2,10 @@
 
 require_relative "ipgeobase/version"
 
-module Ipgeobase
+module Ipgeobase # rubocop:disable Style/Documentation
   class Error < StandardError; end
-  # Your code goes here...
+
+  def self.lookup
+    true
+  end
 end
