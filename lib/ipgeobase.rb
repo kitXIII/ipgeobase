@@ -11,6 +11,7 @@ module Ipgeobase # rubocop:disable Style/Documentation
 
   def self.lookup(ip)
     uri = URI.parse("http://ip-api.com/xml/#{ip}")
+
     response = Net::HTTP.get_response(uri)
 
     Data.parse(response.body)
